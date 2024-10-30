@@ -1,0 +1,20 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let hideButton = document.querySelector(".hideMe");
+
+        // Check if the hideButton exists in the DOM
+        if (hideButton) {
+            // Use endsWith to check for the URL
+            if (window.location.pathname.endsWith('/post')) {
+                hideButton.style.display = 'block'; // Show the button
+            } else {
+                hideButton.style.display = 'none'; // Hide the button
+            }
+        }
+    });
+</script>
+
+
+<footer>
+        <p>&copy; <%= new Date().getFullYear() %> My Blog</p>
+    </footer>

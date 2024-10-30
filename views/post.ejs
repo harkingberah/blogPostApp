@@ -1,0 +1,38 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <article>
+        <h1>Blog Post</h1>
+        <form action="/submit" method="post">
+            <textarea name="blog" id="blogPost" cols="30" rows="10"></textarea><br/><br/>
+            <input type="submit" value="Post Now" class="btn btn-success btn-sm">
+        </form>
+        <br>
+        <form action="/clear-posts" method="post">
+            <input type="submit" value="Clear All Posts" class="btn btn-danger btn-sm">
+        </form>
+
+        <ul>
+    <% if (Array.isArray(blogContent) && blogContent.length > 0) { %>
+        <% blogContent.forEach((con) => { %>
+            <li>
+                <p class="post-meta"><%= con.post %> - <i>Posted on <%= currentDateNow + " --- " + currentTimeNow %></i></p>
+            <form action="/post/<%= con.id %>/edit" method="get" style="display:inline;">
+                <button type="submit" class="btn btn-info btn-sm edit-btn">Edit</button>
+            </form>
+
+            <form action="/delete" method="post" style="display:inline;">
+                    <input type="hidden" name="deletePostId" value="<%= con.id %>">
+                    <button type="submit" class="btn btn-warning btn-sm delete-btn">Delete</button>
+            </form>
+            </li>
+        <% }) %>
+    <% } else { %>
+        <li>No posts available.</li>
+    <% } %>
+</ul>
+
+    </article>
+</main>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <article>
+        <h1>Blog Post</h1>
+        <form action="/edit" method="post">
+             <input type="hidden" name="id" value="<%= post.id %>">
+            <textarea name="blog" id="blogPost" cols="30" rows="10"><%= post.post %></textarea><br/><br/>
+            <input type="submit" value="Update Now" class="btn btn-info"> <br><br>
+             <button type="button" class="btn btn-primary w-100" onclick="window.location.href='/post';">Post Page</button>
+        </form>
+        <br>
+
+    </article>
+</main>
+
+<%- include("partials/footer.ejs") %>

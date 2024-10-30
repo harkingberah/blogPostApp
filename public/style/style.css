@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: coral !important;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.nav {
+  position: relative;
+}
+
+nav ul,
+.hideMe {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  background-color: rgb(206, 88, 45);
+}
+
+nav li,
+.hideMe {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav a,
+.hideMe {
+  text-decoration: none !important;
+  color: teal;
+}
+nav a,
+.hideMe:hover {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2;
+  background-color: rgba(225, 10, 150, 0.1);
+}
+a {
+  text-decoration: none;
+}
+.hideMe {
+  position: absolute;
+  left: 59%;
+  top: 16%;
+  background-color: white;
+  color: black;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+article {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.post-meta {
+  font-style: italic;
+}
+.card {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.emoji {
+  font-size: 2em;
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 60%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  color: #333;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 10px 0;
+}
+a {
+  text-decoration: none;
+  color: #0077b5;
+}
+a:hover {
+  text-decoration: underline;
+}
+.google-btn {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn i {
+  margin-right: 8px;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
